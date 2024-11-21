@@ -41,9 +41,6 @@ Bu projede, Kaggle'dan alınan "Online Sales Dataset" adlı veri seti kullanılm
 - **Eksik Veri İşleme**: `CustomerID`, `ShippingCost` ve `WarehouseLocation` gibi sütunlarda eksik veriler tespit edilip uygun şekilde doldurulmuştur (örneğin, "Unknown" etiketi ile).
 - **Negatif Değerler**: `Quantity` ve `UnitPrice` gibi sütunlarda negatif değerler kontrol edilip görselleştirilmiştir.
 - **Yeni Özelliklerin Oluşturulması**: `TotalSales` (Toplam Satış) gibi yeni özellikler türetilmiştir. `TotalSales`, `Quantity * UnitPrice * (1 - Discount)` şeklinde hesaplanmıştır.
-  
-```python
-df['TotalSales'] = df['Quantity'] * df['UnitPrice'] * (1 - df['Discount'])
 
 ### 3. **Makine Öğrenimi Modeli - Satış Tahminleri**
 - **Model Seçimi**:Satışları tahmin etmek için Random Forest Regressor modeli kullanılmıştır.
